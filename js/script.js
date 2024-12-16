@@ -89,6 +89,9 @@ loginForm.addEventListener('submit', async (e) => {
         alert('Login successful!');
         loadMessages();
     } else {
+      postTxtInput.placeholder = "You must be signed in to write a Kit"; 
+      postTxtInput.disabled = true; 
+      postBtn.disabled = true;
         alert('Login failed!');
         loadMessages();
     }
