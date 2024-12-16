@@ -80,7 +80,6 @@ loginForm.addEventListener('submit', async (e) => {
 
     if (response.ok) {
         const data = await response.json();
-        console.log(data);
         currentUserId = data.userId; // Store the user ID
         const loggedas = document.getElementById('currentuser');
         loggedas.innerHTML = data.nameofuser;
