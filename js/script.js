@@ -1,5 +1,5 @@
 const baseUrl = "https://kitnapi.glitch.me"; // Base URL for the API
-const version = "0.4.0a"
+const version = "0.4.1b"
 const registerForm = document.getElementById('registerForm');
 const loginForm = document.getElementById('loginForm');
 const postForm = document.getElementById('postForm');
@@ -156,7 +156,8 @@ async function deleteMessage(id) {
         alert(`Failed to delete message: ${errorData.error}`);
     }
 }
-window.onload = function() { // Call loadMessages() every 5 seconds (5000 milliseconds) 
+window.onload = function() {
+    loadMessages(); // Call loadMessages() every 5 seconds (5000 milliseconds) 
   setInterval(loadMessages, 10000); 
     const versionString = document.getElementsByClassName('versionstring')[0];
   versionString.innerHTML = "Version " + version + " - Kit Studios 2024";

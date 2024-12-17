@@ -1,44 +1,48 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex; /* Use flexbox for layout */
+
 }
 h1, h2 {
-    color: #333333;
+  color: #333333;
 }
 
 form {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 5px 0;
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 8px;  
+  width: calc(100% - 2%);
+  padding: 10px;
+  margin: 5px 0;
+border: 2px solid rgba(0,0,0,0.2);
+border-radius: 8px;  
 }
 sup {
-  font-size: small;
+font-size: small;
 }
 
 #sidebar {
 width: 254px;
 border-right: 2px solid black;
 height: 100%;
-position: absolute;
-  text-align: center;
+position: fixed; /* Change to fixed */
+text-align: center;
 left: 0;
 top: 0;
 }
 #sidebar > h1 {
 white-space: nowrap;
-font-size: ;
 }
 #sidebar > img {
-  top: 5px;
-  position: relative;
+top: 5px;
+position: relative;
+border-radius: 8px;
+box-shadow: 0 0 20px 10px rgba(128, 0, 128, 0.5); 
+transition: box-shadow 0.3s ease-in-out;
 }
 form > input {
 max-width: 150px;
@@ -46,10 +50,10 @@ max-width: 150px;
 
 .versionstring {
 bottom: 0;
-  position: absolute;
-  text-align: center;
-  left: 0;
-  right: 0;
+position: absolute;
+text-align: center;
+left: 0;
+right: 0;
 
 }
 #currentuser {
@@ -58,60 +62,78 @@ text-decoration: underline;
 }
 .messagesection {
 width: 72%;
-  left: 15%;
-  position: absolute;
-  top: 200px;
+left: 15%;
+position: absolute;
+top: 200px;
 }
 #sidebar > hr {
-  width: 107%;
-  left: -20px;
-  position: relative;
+width: 107%;
+left: -20px;
+position: relative;
 }
 #postSection {
-  width: 72%;
-  left: 15%;
-  position: absolute;
-  top: 9px;
+width: 72%;
+left: 15%;
+position: absolute;
+top: 9px;
 }
+#content {
+flex-grow: 1; 
+margin-left: 254px; 
+padding: 20px; 
+overflow: hidden;
+height: 100%;
+bottom: 40px;
+position: relative;
+}
+
+#postSection, .messagesection {
+width: 100%; 
+padding: 20px; 
+position: relative;
+top: 0; 
+left: 0; 
+}
+
 .kit {
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 8px;
-  background-color: gray;
-  color: white;
-  margin: 5px;
+border: 2px solid rgba(0,0,0,0.2);
+border-radius: 8px;
+background-color: gray;
+color: white;
+margin: 5px;
 }
 .kit > p {
-  margin-left: 5px;
+margin-left: 5px;
 }
 
 .delBtn {
-      background-color: red;
+    background-color: red;
 }
 
 .delBtn:hover {
-      background-color: darkred;
+    background-color: darkred;
 }
 
 .button-container {
-  float: right;
-  position: relative;
-  bottom: 45px;
-  right: 5px;
+float: right;
+position: relative;
+bottom: 45px;
+right: 5px;
 }
 button {
-    color: white;
-  border: 2px solid rgba(0,0,0,0.2);
-  border-radius: 8px;    
-  padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: gray;
+  color: white;
+border: 2px solid rgba(0,0,0,0.2);
+border-radius: 8px;    
+padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: gray;
 }
 
 button:hover {
-    background-color: darkgray;
+  background-color: darkgray;
 }
 .postbutton:disabled {
-  background-color: #383838;
-  cursor: not-allowed;
+background-color: #383838;
+cursor: not-allowed;
 }
