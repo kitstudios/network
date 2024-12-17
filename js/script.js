@@ -157,7 +157,7 @@ async function deleteMessage(id) {
     }
 }
 window.onload = function() { // Call loadMessages() every 5 seconds (5000 milliseconds) 
-  setInterval(loadMessages, 2000); 
+  setInterval(loadMessages, 10000); 
     const versionString = document.getElementsByClassName('versionstring')[0];
   versionString.innerHTML = "Version " + version + " - Kit Studios 2024";
 }
