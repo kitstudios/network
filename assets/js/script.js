@@ -1,4 +1,4 @@
-const baseUrl = ""; // Base URL for the API
+const baseUrl = "https://kitnapi.glitch.me"; // Base URL for the API
 const version = "0.6.5a"
 const registerForm = document.getElementById('registerForm');
 const loginForm = document.getElementById('loginForm');
@@ -199,8 +199,7 @@ async function loadMessages() {
             `).join('');
         }
     } catch (error) {
-        //messagesDiv.innerHTML = `<div class="post"><p>Failed to load Kits.</p></div>`;
-        messagesDiv.innerHTML = `<div class="kit"><p>Currently under maintenance in preparation for update 0.6.5a. Please read the post about <a href="https://github.com/orgs/kitstudios/discussions/3">the database reset here</a>.</p></div>`;
+        //messagesDiv.innerHTML = `<div class="kit"><p>Failed to load Kits.</p></div>`;
     }
 }
 
