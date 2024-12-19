@@ -1,59 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kit Network</title>
-    <link rel="stylesheet" href="css/style.css">
+	<meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    
+	<title>Kit Network</title>
 </head>
-<body>
-          <div id="sidebar">
-        <img src="img/logo.png" height="128" width="128">
-            <p class="currentusertxt">Currently signed in as <a id="currentuser">Guest</a></p>
-            <hr>
-          <div class="registersection">
-            <h2>Register</h2>
-            <form id="registerForm">
-                <input type="text" id="regUsername" placeholder="Username" required>
-                <input type="password" id="regPassword" placeholder="Password" required>
-                <input type="email" id="regEmail" placeholder="Email" required>
-                <br>
-                <button type="submit">Register</button>
-            </form>
-          </div>
+<body onload="startTime();loadMessages();">
+
+<div class="sidenav">
+    <img class="logo" src="assets/img/logo.png" height="84" width="84">  
+    <hr>
+  <p class="currentusertxt">Signed in as <a id="currentuser">Guest</a></p>  
 <hr>
-          <div class="loginsection">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="loginUsername" placeholder="Username" required>
-                <input type="password" id="loginPassword" placeholder="Password" required>
-                <br>
-                <button type="submit">Login</button>
-            </form>
-          </div>
+<br>
+<br>
+  <div class="sidenavlist">
+   <a class="white" onclick="openTab('Home')">Home</a>
+   <a class="white" onclick="openTab('Login')">Login</a>
+   <a class="white" onclick="openTab('Register')">Register</a>
 <hr>
-        <p style="font-size: 14px;">Profiles are not currently planned.<br><br>To sign out, reload the page. It will be fixed in a future update<br><br>You'll need to sign in each visit, may be fixed in a future update<br><br>There is currently no displayed time for when Kits are posted. Will be added in a future update.</p>
-        <hr>
-        <p class="versionstring"></p>
-        </div>
+   <p class="white" style="width: 155px;text-align: center;">Profiles are not currently planned.
+    <br><br>
+    To sign out, reload the page. It will be fixed in a future update.
+    <br><br>
+    You'll need to sign in each visit, may be fixed in a future update
+    <br><br>
+    There is currently no displayed time for when Kits are posted. Will be added in a future update.</p>
+  </div>
+  <br>
+  <div class="white" id="versionstring"></div>
+</div>
+
+<!-- Page content -->
+<div class="main">
+  <div id="Home" class="tab" style="">
     <div id="content">
-        <div id="postSection">
-            <h2>Send a Kit</h2>
-            <form id="postForm">
-                <textarea id="postinput" placeholder="You must be signed in to write a Kit" required disabled></textarea>
-                <button class="postbutton" type="submit" disabled>Kit it!</button>
-            </form>
-        </div>
+      <div id="postSection">
+          <h2>Send a Kit</h2>
+          <form id="postForm">
+              <textarea id="postinput" placeholder="You must be signed in to write a Kit" required disabled></textarea>
+              <br>
+              <br>
+              <button class="postbutton" type="submit" disabled>Kit it!</button>
+          </form>
+      </div>
 
-            <div class="messagesection">
-            <h2>Kits</h2>
-            <div id="kitlist"><p>Loading Kits...</p></div>
-            </div>
-        </div>
+          <div class="messagesection">
+          <h2>Kits</h2>
+          <div id="kitlist"><p>Loading Kits...</p></div>
+          </div>
+   </div>
+  </div>
+	
 
+    <div id="Login" class="tab" style="display:none;">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" placeholder="Username" required>
+            <br>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <br>
+            <button type="submit">Login</button>
+        </form>
+    </div>
 
-
-
-    <script src="js/script.js"></script>
+    <div id="Register" class="tab" style="display:none;">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="regUsername" placeholder="Username" required>
+            <br>
+            <input type="password" id="regPassword" placeholder="Password" required>
+            <br>
+            <input type="email" id="regEmail" placeholder="Email" required>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+<script async src="assets/js/script.js"></script>
 </body>
 </html>
