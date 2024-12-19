@@ -1,4 +1,4 @@
-const baseUrl = "https://kitnapi.glitch.me"; // Base URL for the API
+const baseUrl = ""; // Base URL for the API
 const version = "0.4.1b"
 const registerForm = document.getElementById('registerForm');
 const loginForm = document.getElementById('loginForm');
@@ -35,7 +35,7 @@ async function loadMessages() {
         }
     } catch (error) {
         console.error('Error loading Kits:', error);
-        messagesDiv.innerHTML = `<div class="kit"><p>Failed to load Kits.</p></div>`;
+        messagesDiv.innerHTML = `<div class="kit"><p>Currently under maintenance in preparation for update 0.6.5a.</p></div>`;
     }
 }
 
