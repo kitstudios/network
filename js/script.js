@@ -35,7 +35,7 @@ async function loadMessages() {
         }
     } catch (error) {
         console.error('Error loading Kits:', error);
-        messagesDiv.innerHTML = `<div class="kit"><p>Currently under maintenance in preparation for update 0.6.5a.</p></div>`;
+        messagesDiv.innerHTML = `<div class="kit"><p>Currently under maintenance in preparation for update 0.6.5a. Please read the post about <a href="https://github.com/orgs/kitstudios/discussions/3">the account reset here</a>.</p></div>`;
     }
 }
 
